@@ -10,7 +10,7 @@ NeoBytes Client Library to connect to NeoBytes Core (neobytesd) via RPC
 neobytesd-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install neobytesd-rpc
+npm install @neobytes/neobytesd-rpc
 ```
 
 ## Usage
@@ -27,8 +27,8 @@ Config parameters :
 
 Promise vs callback based
 
-  - `require('neobytesd-rpc/promise')` to have promises returned
-  - `require('neobytesd-rpc')` to have callback functions returned
+  - `require('@neobytes/neobytesd-rpc/promise')` to have promises returned
+  - `require('@neobytes/neobytesd-rpc')` to have callback functions returned
 	
 ### Examples
 
@@ -47,7 +47,7 @@ var config = {
 Promise based:
 
 ```javascript
-var RpcClient = require('neobytesd-rpc/promise');
+var RpcClient = require('@neobytes/neobytesd-rpc/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -68,8 +68,8 @@ Callback based (legacy):
 
 ```javascript
 var run = function() {
-  var bitcore = require('neobytes-lib');
-  var RpcClient = require('neobytesd-rpc');
+  var bitcore = require('@neobytes/neobytes-lib');
+  var RpcClient = require('@neobytes/neobytesd-rpc');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -115,7 +115,7 @@ var run = function() {
 You can dynamically access to the help of each method by doing
 
 ```
-const RpcClient = require('neobytesd-rpc');
+const RpcClient = require('@neobytes/neobytesd-rpc');
 var client = new RPCclient({
     protocol:'http',
     user: 'neobytes',
