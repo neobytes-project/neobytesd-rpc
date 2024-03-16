@@ -1,4 +1,4 @@
-name: Test - Self-Hosted.
+name: Test - Self-Hosted
 
 on:
   workflow_dispatch:
