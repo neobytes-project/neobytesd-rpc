@@ -1,16 +1,16 @@
-# dashd-rpc
+# neobytesd-rpc
 
-[![Build Status](https://github.com/dashevo/dashd-rpc/actions/workflows/test.yml/badge.svg)](https://github.com/dashevo/dashd-rpc/actions/workflows/test.yml)
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashd-rpc.svg)](https://www.npmjs.org/package/@dashevo/dashd-rpc)
+[![Build Status](https://github.com/neobytes-project/neobytesd-rpc/actions/workflows/test.yml/badge.svg)](https://github.com/neobytes-project/neobytesd-rpc/actions/workflows/test.yml)
+[![NPM Package](https://img.shields.io/npm/v/neobytes-project/neobytesd-rpc.svg)](https://www.npmjs.org/package/neobytes-project/neobytesd-rpc)
 
-Dash Client Library to connect to Dash Core (dashd) via RPC
+NeoBytes Client Library to connect to NeoBytes Core (neobytesd) via RPC
 
 ## Install
 
-dashd-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+neobytesd-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install @dashevo/dashd-rpc
+npm install neobytesd-rpc
 ```
 
 ## Usage
@@ -23,12 +23,12 @@ Config parameters :
 	- user : (string - optional) - (default: 'user') - Set the user credential.
 	- pass : (string - optional) - (default: 'pass') - Set the password credential.
 	- host : (string - optional) - (default: '127.0.0.1') - The host you want to connect with.
-	- port : (integer - optional) - (default: 9998) - Set the port on which perform the RPC command.
+	- port : (integer - optional) - (default: 11426) - Set the port on which perform the RPC command.
 
 Promise vs callback based
 
-  - `require('@dashevo/dashd-rpc/promise')` to have promises returned
-  - `require('@dashevo/dashd-rpc')` to have callback functions returned
+  - `require('neobytesd-rpc/promise')` to have promises returned
+  - `require('neobytesd-rpc')` to have callback functions returned
 	
 ### Examples
 
@@ -37,17 +37,17 @@ Config:
 ```javascript
 var config = {
     protocol: 'http',
-    user: 'dash',
+    user: 'neobytes',
     pass: 'local321',
     host: '127.0.0.1',
-    port: 19998
+    port: 12426
 };
 ```
 
 Promise based:
 
 ```javascript
-var RpcClient = require('@dashevo/dashd-rpc/promise');
+var RpcClient = require('neobytesd-rpc/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -68,8 +68,8 @@ Callback based (legacy):
 
 ```javascript
 var run = function() {
-  var bitcore = require('@dashevo/dashcore-lib');
-  var RpcClient = require('@dashevo/dashd-rpc');
+  var bitcore = require('neobytes-lib');
+  var RpcClient = require('neobytesd-rpc');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -115,13 +115,13 @@ var run = function() {
 You can dynamically access to the help of each method by doing
 
 ```
-const RpcClient = require('@dashevo/dashd-rpc');
+const RpcClient = require('neobytesd-rpc');
 var client = new RPCclient({
     protocol:'http',
-    user: 'dash',
+    user: 'neobytes',
     pass: 'local321', 
     host: '127.0.0.1', 
-    port: 19998,
+    port: 12426,
     timeout: 1000
 });
 
@@ -142,4 +142,4 @@ Feel free to dive in! [Open an issue](https://github.com/dashevo/dash-std-templa
 
 ## License
 
-[MIT](LICENSE) &copy; Dash Core Group, Inc.
+[MIT](LICENSE) &copy; NeoBytes Core Group, Inc.
