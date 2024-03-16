@@ -36,7 +36,7 @@ jobs:
       - name: Run tests
         run: npm run test
 
-        - name: Run coverage tests
+      - name: Run coverage tests
         run: npm run coverage
 
   release:
