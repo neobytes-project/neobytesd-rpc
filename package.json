@@ -1,7 +1,7 @@
 {
   "name": "@neobytes/neobytesd-rpc",
   "description": "NeoBytes Client Library to connect to NeoBytes Core (neobytesd) via RPC",
-  "version": "18.2.0",
+  "version": "18.1.9",
   "author": {
     "name": "Stephen Pair",
     "email": "stephen@bitpay.com"
