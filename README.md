@@ -1,6 +1,6 @@
 # neobytesd-rpc
 
-[![Build Status](https://github.com/neobytes-project/neobytesd-rpc/actions/workflows/test.yml/badge.svg)](https://github.com/neobytes-project/neobytesd-rpc/actions/workflows/test.yml)
+[![Build Status](https://github.com/neobytes-project/neobytesd-rpc/actions/workflows/test_and_release.yml/badge.svg)](https://github.com/neobytes-project/neobytesd-rpc/actions/workflows/test_and_release.yml)
 [![NPM Package](https://img.shields.io/npm/v/@neobytes/neobytesd-rpc.svg)](https://www.npmjs.org/package/@neobytes/neobytesd-rpc)
 
 NeoBytes Client Library to connect to NeoBytes Core (neobytesd) via RPC
