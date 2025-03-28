@@ -1,18 +1,20 @@
-bitcoind-rpc-dash.js
+neobytesd-rpc.js
 ===============
 
-[![NPM Package](https://img.shields.io/npm/v/bitcoind-rpc-dash.svg?style=flat-square)](https://www.npmjs.org/package/bitcoind-rpc-dash)
-[![Build Status](https://img.shields.io/travis/dashpay/bitcoind-rpc-dash.svg?branch=master&style=flat-square)](https://travis-ci.org/dashpay/bitcoind-rpc-dash)
-[![Coverage Status](https://img.shields.io/coveralls/dashpay/bitcoind-rpc-dash.svg?style=flat-square)](https://coveralls.io/r/dashpay/bitcoind-rpc-dash?branch=master)
+[![NPM Package](https://img.shields.io/npm/v/neobytesd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/neobytesd-rpc)
+
+[![Build Status](https://img.shields.io/travis/dashpay/neobytesd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/dashpay/neobytesd-rpc)
+
+[![Coverage Status](https://img.shields.io/coveralls/dashpay/neobytesd-rpc.svg?style=flat-square)](https://coveralls.io/r/dashpay/neobytesd-rpc?branch=master)
 
 A client library to connect to Dash Core RPC in JavaScript.
 
 ## Get Started
 
-bitcoind-rpc-dash.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+neobytesd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install bitcoind-rpc-dash
+npm install neobytesd-rpc
 ```
 
 ## Examples
@@ -20,14 +22,14 @@ npm install bitcoind-rpc-dash
 ```javascript
 var run = function() {
   var bitcore = require('bitcore');
-  var RpcClient = require('bitcoind-rpc-dash');
+  var RpcClient = require('neobytesd-rpc');
 
   var config = {
     protocol: 'http',
     user: 'user',
     pass: 'pass',
     host: '127.0.0.1',
-    port: '18332',
+    port: '11427',
   };
 
   var rpc = new RpcClient(config);
@@ -70,6 +72,25 @@ var run = function() {
 };
 ```
 
+## Help 
+
+You can dynamically access to the help of each method by doing
+```
+const RpcClient = require('neobytesd-rpc');
+var client = new RPCclient({
+    protocol:'http',
+    user: 'neobytesrpc',
+    pass: 'local321', 
+    host: '127.0.0.1', 
+    port: '11427',
+});
+
+var cb = function (err, data) {
+    console.log(data)
+};
+client.help(cb); //Get full help
+client.help('getinfo',cb); //Get help of specific method
+```
 ## License
 
 **Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).**
