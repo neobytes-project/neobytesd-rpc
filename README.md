@@ -1,7 +1,7 @@
 neobytesd-rpc.js
 ===============
 
-[![NPM Package](https://img.shields.io/npm/v/neobytesd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/neobytesd-rpc)
+[![NPM Package](https://img.shields.io/npm/v/@neobytes/neobytesd-rpc.svg)](https://www.npmjs.org/package/@neobytes/neobytesd-rpc)
 
 A client library to connect to Dash Core RPC in JavaScript.
 
