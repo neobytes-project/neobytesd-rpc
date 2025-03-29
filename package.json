@@ -2,10 +2,7 @@
   "name": "@neobytes/neobytesd-rpc",
   "description": "Neobytes Client Library to connect to Neobytes Core via RPC",
   "version": "1.0.1",
-  "author": {
-    "name": "Stephen Pair",
-    "email": "stephen@bitpay.com"
-  },
+  "author": "Stephen Pair <stephen@bitpay.com>",
   "contributors": [
     {
       "name": "Jeff Garzik",
@@ -38,7 +35,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/neobytes-project/neobytesd-rpc"
+    "url": "https://github.com/neobytes-project/neobytesd-rpc.git"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -59,5 +56,9 @@
   "bugs": {
     "url": "https://github.com/neobytes-project/neobytesd-rpc/issues"
   },
-  "homepage": "https://github.com/neobytes-project/neobytesd-rpc"
+  "homepage": "https://github.com/neobytes-project/neobytesd-rpc",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
 }
