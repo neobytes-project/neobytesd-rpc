@@ -3,7 +3,7 @@ neobytesd-rpc.js
 
 [![NPM Package](https://img.shields.io/npm/v/neobytesd-rpc.svg)](https://www.npmjs.org/package/neobytesd-rpc)
 
-A client library to connect to Dash Core RPC in JavaScript.
+A client library to connect to Neobytes Core RPC in JavaScript.
 
 ## Get Started
 
