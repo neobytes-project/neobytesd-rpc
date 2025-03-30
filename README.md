@@ -13,6 +13,16 @@ neobytesd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [n
 npm install neobytesd-rpc
 ```
 
+## RpcClient
+
+Arguments : 
+
+	- protocol : (string - optional) - (default: 'https') - Set the protocol to be used. Either `http` or `https`.
+	- user : (string - optional) - (default: 'user') - Set the user credential.
+	- pass : (string - optional) - (default: 'pass') - Set the password credential.
+	- host : (string - optional) - (default: '127.0.0.1') - The host you want to connect with.
+	- port : (integer - optional) - (default: 1427) - Set the port on which perform the RPC command.
+	
 ## Examples
 
 ```javascript
