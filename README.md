@@ -1,7 +1,7 @@
 neobytesd-rpc.js
 ===============
 
-[![NPM Package](https://img.shields.io/npm/v/neobytesd-rpc.svg)](https://www.npmjs.org/package/neobytesd-rpc)
+[![NPM Package](https://img.shields.io/npm/v/neobytesd-rpc.svg)](https://www.npmjs.org/package/@neobytes/neobytesd-rpc)
 
 A client library to connect to Neobytes Core RPC in JavaScript.
 
@@ -10,7 +10,7 @@ A client library to connect to Neobytes Core RPC in JavaScript.
 neobytesd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install neobytesd-rpc
+npm install @neobytes/neobytesd-rpc
 ```
 
 ## RpcClient
@@ -22,22 +22,49 @@ Arguments :
 	- pass : (string - optional) - (default: 'pass') - Set the password credential.
 	- host : (string - optional) - (default: '127.0.0.1') - The host you want to connect with.
 	- port : (integer - optional) - (default: 1427) - Set the port on which perform the RPC command.
+Promise vs callback based
+
+  - `require('neobytesd-rpc/promise')` to have promises returned
+  - `require('neobytesd-rpc')` to have callback functions returned
 	
 ## Examples
 
+Config:
+```javascript
+var config = {
+    protocol: 'http',
+    user: 'neobytesrpc',
+    pass: 'local321',
+    host: '127.0.0.1',
+    port: '11427',
+};
+```
+
+Promise based:
+```javascript
+var RpcClient = require('neobytesd-rpc/promise');
+var rpc = new RpcClient(config);
+
+rpc.getRawMemPool()
+    .then(ret => {
+        return Promise.all(ret.result.map(r => rpc.getRawTransaction(r)))
+    })
+    .then(rawTxs => {
+        rawTxs.forEach(rawTx => {
+            console.log(`RawTX: ${rawTx.result}`);
+        })
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+```
+
+Callback based (legacy):
 ```javascript
 var run = function() {
   var bitcore = require('bitcore');
   var RpcClient = require('neobytesd-rpc');
-
-  var config = {
-    protocol: 'http',
-    user: 'user',
-    pass: 'pass',
-    host: '127.0.0.1',
-    port: '11427',
-  };
-
   var rpc = new RpcClient(config);
 
   var txids = [];

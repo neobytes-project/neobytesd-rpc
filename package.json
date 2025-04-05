@@ -1,7 +1,7 @@
 {
-  "name": "neobytesd-rpc",
+  "name": "@neobytes/neobytesd-rpc",
   "description": "Neobytes Client Library to connect to Neobytes Core via RPC",
-  "version": "1.0.2",
+  "version": "1.2.1",
   "author": {
     "name": "Stephen Pair",
     "email": "stephen@bitpay.com"
@@ -26,10 +26,6 @@
     {
       "name": "Alex Werner",
       "email": "alex.werner@dash.org"
-    },
-    {
-      "name": "SikkieNL",
-      "email": "sikkienl@outlook.com"
     }
   ],
   "keywords": [
@@ -47,11 +43,12 @@
     "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --recursive"
   },
   "dependencies": {
-    "async": "^1.3.0"
+    "async": "^1.3.0",
+    "bluebird": "^3.5.1"
   },
   "devDependencies": {
     "chai": "^1.10.0",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^2.1.0",
     "sinon": "^1.12.2"
