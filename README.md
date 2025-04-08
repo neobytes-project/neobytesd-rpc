@@ -22,6 +22,7 @@ Arguments :
 	- pass : (string - optional) - (default: 'pass') - Set the password credential.
 	- host : (string - optional) - (default: '127.0.0.1') - The host you want to connect with.
 	- port : (integer - optional) - (default: 1427) - Set the port on which perform the RPC command.
+
 Promise vs callback based
 
   - `require('@neobytes/neobytesd-rpc/promise')` to have promises returned
@@ -30,6 +31,7 @@ Promise vs callback based
 ## Examples
 
 Config:
+
 ```javascript
 var config = {
     protocol: 'http',
@@ -41,6 +43,7 @@ var config = {
 ```
 
 Promise based:
+
 ```javascript
 var RpcClient = require('@neobytes/neobytesd-rpc/promise');
 var rpc = new RpcClient(config);
@@ -57,10 +60,10 @@ rpc.getRawMemPool()
     .catch(err => {
         console.log(err)
     })
-
 ```
 
 Callback based (legacy):
+
 ```javascript
 var run = function() {
   var bitcore = require('@neobytes/neobytes-lib');
@@ -105,9 +108,10 @@ var run = function() {
 };
 ```
 
-## Help 
+## Help
 
 You can dynamically access to the help of each method by doing
+
 ```
 const RpcClient = require('@neobytes/neobytesd-rpc');
 var client = new RPCclient({
